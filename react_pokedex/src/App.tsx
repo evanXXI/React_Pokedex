@@ -1,14 +1,30 @@
+import Wrapper from "./components/Wrapper";
 import Container from "./components/Container";
 import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
+import CardHolder from "./components/CardHolder";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
-      <Container>
-        <Hero />
-        <SearchBar />
-      </Container>
+      <Wrapper>
+        <Container>
+          <Hero />
+          <SearchBar />
+
+          <CardHolder>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </CardHolder>
+        </Container>
+      </Wrapper>
+      <Footer />
     </>
   );
 };
