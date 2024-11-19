@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -7,9 +7,7 @@ interface Props {
 const Container: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <section className="container-lg text-light d-flex flex-column mx-5">
-        {children}
-      </section>
+      <section className="container px-5">{children}</section>
     </>
   );
 };
