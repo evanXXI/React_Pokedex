@@ -7,7 +7,7 @@ interface Props {
 const Wrapper: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="bg-dark h-100 w-100">{children}</div>
+      <div className="h-100 w-100">{children}</div>
     </>
   );
 };
