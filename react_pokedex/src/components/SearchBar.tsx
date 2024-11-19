@@ -1,10 +1,8 @@
-import React from "react";
-
 const SearchBar = () => {
   return (
-    <form className="d-flex" role="search">
+    <form className="d-flex flex-column flex-md-row p-0 m-0 mb-5" role="search">
       <input
-        className="form-control me-2"
+        className="form-control"
         type="search"
         placeholder="Search"
         aria-label="Search"
