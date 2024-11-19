@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import Wrapper from "./components/Wrapper";
+import BigWrapper from "./components/BigWrapper";
+import LittleWrapper from "./components/LittleWrapper";
 import Container from "./components/Container";
 import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
@@ -16,22 +17,24 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Wrapper>
-        <Container>
-          <Hero />
-          <SearchBar />
+      <BigWrapper>
+        <LittleWrapper>
+          <Container>
+            <Hero />
+            <SearchBar />
 
-          <CardHolder>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </CardHolder>
-        </Container>
-      </Wrapper>
-      <Footer />
+            <CardHolder>
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </CardHolder>
+          </Container>
+        </LittleWrapper>
+        <Footer />
+      </BigWrapper>
     </>
   );
 };
