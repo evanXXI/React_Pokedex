@@ -1,7 +1,8 @@
 const Footer = () => {
   return (
     <>
-      <footer className="bg-dark text-light text-center mt-auto py-1">
+      <footer className="text-light text-center mt-auto py-1">
+        <hr />
         <div className="container">
           <p>
             <strong>Pokédex v0.1</strong>
