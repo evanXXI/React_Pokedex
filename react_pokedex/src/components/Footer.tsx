@@ -1,11 +1,16 @@
 const Footer = () => {
   return (
     <>
-      <footer className="text-light text-center mt-auto py-1">
+      <footer
+        className="text-light text-center mt-auto py-1"
+        style={{ fontSize: "0.9em" }}
+      >
         <hr />
         <div className="container">
           <p>
-            <strong>Pokédex v0.1</strong>
+            <a className="text-decoration-none text-light" href="./">
+              <strong>PokéDex v0.1</strong>
+            </a>
           </p>
           <p>
             Created with 💛 by <strong>Evan</strong>
