@@ -1,12 +1,25 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+
 import { useEffect } from "react";
-import BigWrapper from "./components/BigWrapper";
-import LittleWrapper from "./components/LittleWrapper";
-import Container from "./components/Container";
-import Hero from "./components/Hero";
-import SearchBar from "./components/SearchBar";
-import CardHolder from "./components/CardHolder";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
+import MainLayout from "./layouts/MainLayout";
+import PokemonHomePage from "./pages/PokemonHomePage";
+import PokemonDetailsPage from "./pages/PokemonDetailsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<PokemonHomePage />} />
+      <Route path="/pokemonDetails" element={<PokemonDetailsPage />} />
+      <Route path="/NotFound" element={<NotFoundPage />} />
+    </Route>
+  )
+);
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -17,24 +30,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <BigWrapper>
-        <LittleWrapper>
-          <Container>
-            <Hero />
-            <SearchBar />
-
-            <CardHolder>
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </CardHolder>
-          </Container>
-        </LittleWrapper>
-        <Footer />
-      </BigWrapper>
+      <RouterProvider router={router} />
     </>
   );
 };
