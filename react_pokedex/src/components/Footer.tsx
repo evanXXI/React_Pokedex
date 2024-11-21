@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
@@ -8,9 +10,9 @@ const Footer = () => {
         <hr />
         <div className="container">
           <p>
-            <a className="text-decoration-none text-light" href="./">
+            <Link to="/" className="text-decoration-none text-light">
               <strong>PokéDex v0.1</strong>
-            </a>
+            </Link>
           </p>
           <p>
             Created with 💛 by <strong>Evan</strong>
